@@ -1,8 +1,8 @@
-import Generator from "./Generator";
+import PasswordGenerator from "./PasswordGeneratorComponents/PasswordGenerator";
 import "./App.css";
 
 function App() {
-  return <Generator />;
+  return <PasswordGenerator />;
 }
 
 export default App;
