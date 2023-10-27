@@ -1,27 +1,45 @@
-.container {
+.main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 20%;
+    border: 1px solid red;
+    gap: 20px;
 }
 
 h5 {
     color: #5e5c68;
 }
 
-.input-group {
+/*#region DisplayPassword*/
+.display-password {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
     background-color: #24232a;
+    width: 100%;
+    height: 3rem;
+    font-size: 1.5em;
 }
 
+.display-password svg {
+    margin-right: 10px;
+}
+
+.display-password span {
+    margin-left: 10px;
+}
+
+/*#endregion DisplayPassword*/
 .form-control {
     background-color: #18171e00;
 }
 
 button {
-    width: 30rem;
-    height: 2rem;
+    width: 70%;
+    height: 2.5rem;
     color: #5c8c66;
     background-color: #a5ffaf;
 }
@@ -31,9 +49,10 @@ button {
     flex-direction: column;
     align-items: center;
     background-color: #24232a;
+    width: 100%;
 }
 
-input[type="range"]::-webkit-slider-runnable-track {
+/* input[type="range"]::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     appearance: none;
     width: 90%;
@@ -45,9 +64,9 @@ input[type="range"]::-webkit-slider-runnable-track {
     height: 15px;
     background-color: #ccc;
     border-radius: 16px;
-}
+} */
 
-.strenght {
+.strength {
     display: block;
     width: 90%;
     height: 5rem;

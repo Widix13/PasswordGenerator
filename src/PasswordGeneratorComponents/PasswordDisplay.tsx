@@ -6,14 +6,19 @@ interface Prop {
 }
 
 const PasswordDisplay = ({ password, copyToClipboard }: Prop) => {
+  const checkPasswordIsNull = () => {
+    if (password === "") return "Item not found";
+    return password;
+  };
+
   return (
     <div className="input-group">
-      {password}
       <span
-        className="input-group-text"
+        className="display-password"
         id="addon-wrapping"
         onClick={copyToClipboard}
       >
+        <span>{checkPasswordIsNull()}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"

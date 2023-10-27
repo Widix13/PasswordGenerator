@@ -48,7 +48,7 @@ function PasswordGenerator() {
   };
 
   return (
-    <div className="container">
+    <div className="main">
       <h5>Password Generator</h5>
       <PasswordDisplay
         password={password}
