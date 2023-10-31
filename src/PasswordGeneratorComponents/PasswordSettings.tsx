@@ -28,10 +28,12 @@ const PasswordSettings = ({
   return (
     <div className="password-settings">
       <div className="character-length">
-        <label className="length-label">
-          Character Length {characterLength}
-        </label>
-        <br />
+        {/* <label className="length-label">Character Length</label>
+        <p>{characterLength}</p> */}
+        <div className="length-label">
+          <span className="character-label">Character Length </span>
+          <span className="character">{characterLength}</span>
+        </div>
         <input
           className="characterLength"
           id="characterLength"

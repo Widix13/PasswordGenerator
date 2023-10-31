@@ -4,8 +4,17 @@
     justify-content: space-between;
     align-items: center;
     width: 20%;
-    border: 1px solid red;
     gap: 20px;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    background-color: #24232a;
 }
 
 h5 {
@@ -17,24 +26,110 @@ h5 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
     background-color: #24232a;
     width: 100%;
     height: 3rem;
     font-size: 1.5em;
+    padding: 10px;
 }
 
-.display-password svg {
-    margin-right: 10px;
+
+/*#endregion DisplayPassword*/
+
+/*#region FormPassword*/
+
+
+.password-settings {
+    display: flex;
+    flex-direction: column;
+    background-color: #24232a;
+    width: 100%;
+
 }
 
-.display-password span {
+.character-length {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    gap: 5px;
+}
+
+.length-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.character-label {
+    font-size: 1em;
+}
+
+.character {
+    font-size: 1.5em;
+}
+
+.form-check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+}
+
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    background-color: #e9e9e9;
+}
+
+input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    background-color: #a5ffaf;
+}
+
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+
+.uppercase-label, .lowercase-label, .numbers-label, .symbol-label {
     margin-left: 10px;
 }
 
-/*#endregion DisplayPassword*/
-.form-control {
-    background-color: #18171e00;
+/*#endregion FormPassword*/
+
+/*#region Button*/
+.button-generate {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 button {
@@ -44,59 +139,43 @@ button {
     background-color: #a5ffaf;
 }
 
-.password-settings {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #24232a;
-    width: 100%;
-}
 
-/* input[type="range"]::-webkit-slider-runnable-track {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 90%;
-    cursor: pointer;
-    outline: none;
-}
+/*#endregion Button*/
 
-input[type="range"]::-webkit-slider-runnable-track {
-    height: 15px;
-    background-color: #ccc;
-    border-radius: 16px;
-} */
-
+/*#region StrengthPassword*/
 .strength {
-    display: block;
-    width: 90%;
-    height: 5rem;
+    display: flex;
+    width: 95%;
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     background-color: #18171e;
 }
 
-/* .container-md label {
-    text-align: left;
+.strength p {
+    margin-top: 15px;
+    color: #5e5c68;
 }
 
-.container-md input {
-    padding: 6px 10px;
-    margin: 10px 0;s
-    border: 1px solid #ddd;
-    box-sizing: border-box;
+.boxes p {
+    color: white;
 }
 
-.input-group {
-    padding: 6px 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    display: block;
+.boxes {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 0 5px;
 }
 
-.container-md button {
-    background-color: green;
-    color: #fff;
-    border: 0;
-    padding: 8px;
-    border-radius: 8px;
-    cursor: pointer;
-} */
+.box-first, .box-second, .box-third, .box-fourth {
+    width: 10px;
+    height: 20px;
+}
+
+.box-first, .box-second {
+    background-color: orange;
+}
+
+/*#endregion StrengthPassword*/

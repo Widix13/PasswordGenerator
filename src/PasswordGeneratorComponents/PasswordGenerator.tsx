@@ -54,22 +54,24 @@ function PasswordGenerator() {
         password={password}
         copyToClipboard={copyToClipboard}
       ></PasswordDisplay>
-      <PasswordSettings
-        characterLength={characterLength}
-        setCharacterLength={(value: SetStateAction<number>) =>
-          setCharacterLength(value)
-        }
-        uppercase={uppercase}
-        setUppercase={(value: SetStateAction<boolean>) => setUppercase(value)}
-        lowercase={lowercase}
-        setLowercase={(value: SetStateAction<boolean>) => setLowercase(value)}
-        number={number}
-        setNumber={(value: SetStateAction<boolean>) => setNumber(value)}
-        symbols={symbols}
-        setSymbols={(value: SetStateAction<boolean>) => setSymbols(value)}
-      ></PasswordSettings>
-      <PasswordStrength />
-      <GenerateButton generatePassword={generatePassword} />
+      <div className="settings">
+        <PasswordSettings
+          characterLength={characterLength}
+          setCharacterLength={(value: SetStateAction<number>) =>
+            setCharacterLength(value)
+          }
+          uppercase={uppercase}
+          setUppercase={(value: SetStateAction<boolean>) => setUppercase(value)}
+          lowercase={lowercase}
+          setLowercase={(value: SetStateAction<boolean>) => setLowercase(value)}
+          number={number}
+          setNumber={(value: SetStateAction<boolean>) => setNumber(value)}
+          symbols={symbols}
+          setSymbols={(value: SetStateAction<boolean>) => setSymbols(value)}
+        ></PasswordSettings>
+        <PasswordStrength />
+        <GenerateButton generatePassword={generatePassword} />
+      </div>
     </div>
   );
 }
