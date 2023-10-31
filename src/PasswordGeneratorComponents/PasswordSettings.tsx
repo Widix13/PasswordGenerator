@@ -12,6 +12,15 @@ interface Props {
   symbols: boolean;
   setSymbols: (symbols: boolean) => void;
 }
+const slider = document.querySelector("#characterLength") as HTMLInputElement;
+
+const changeColorSlider = () => {
+  const minValue = parseInt(slider.min, 10);
+  const maxValue = parseInt(slider.max, 10);
+  const sliderValue =
+    ((parseInt(slider.value, 10) - minValue) / (maxValue - minValue)) * 100;
+  slider.style.background = `linear-gradient(to right, #a5ffaf ${sliderValue.toString()}%, #ccc ${sliderValue.toString()}%)`;
+};
 
 const PasswordSettings = ({
   characterLength,
@@ -28,8 +37,6 @@ const PasswordSettings = ({
   return (
     <div className="password-settings">
       <div className="character-length">
-        {/* <label className="length-label">Character Length</label>
-        <p>{characterLength}</p> */}
         <div className="length-label">
           <span className="character-label">Character Length </span>
           <span className="character">{characterLength}</span>
@@ -41,6 +48,7 @@ const PasswordSettings = ({
           min="4"
           max="12"
           step="1"
+          onInput={changeColorSlider}
           onChange={(e) => setCharacterLength(Number(e.target.value))}
           value={characterLength}
         />
